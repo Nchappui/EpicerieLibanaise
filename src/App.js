@@ -600,7 +600,7 @@ function App() {
             </button>
             <div className="booking-widget-container">
               <noscript>Votre navigateur ne supporte pas JavaScript!</noscript>
-              <div className="BookingBox" data-place="ac3d9" data-lang="auto">
+              <div className="BookingBox" data-place="ac3d9" data-lang="fr">
                 <span>
                   En coopération avec{" "}
                   <a
