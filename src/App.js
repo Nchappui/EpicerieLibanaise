@@ -300,9 +300,24 @@ function App() {
             Une Ode aux Saveurs Libanaises
           </h2>
           <p className="lead" style={{ maxWidth: 760, margin: "0 auto" }}>
-            Cuisine de partage, élégance méditerranéenne, ingrédients
-            d'exception & épices chaleureuses. Une expérience culinaire raffinée
-            au cœur de la ville.
+            Épicerie Libanaise, c’est l’élégance à la libanaise : une cuisine
+            qui allie tradition et modernité dans une ambiance conviviale et
+            raffinée. Nos recettes ancestrales, transmises de génération en
+            génération, sont revisitées avec justesse pour offrir des plats
+            authentiques, généreux et pleins de saveurs.
+            <br />
+            <br />
+            Ici, tout est pensé pour le plaisir du goût et le partage : des
+            produits frais soigneusement sélectionnés, une carte équilibrée
+            entre classiques et créations, et une attention particulière portée
+            à chaque détail.
+            <br />
+            <br />
+            Notre équipe jeune et dynamique vous accueille avec le sourire et la
+            bonne humeur, fidèle à l’esprit libanais : chaleureux, accueillant
+            et festif. Que ce soit pour un déjeuner entre amis, un dîner en
+            famille ou un moment à emporter, L’Épicerie Libanaise vous promet
+            une expérience simple, savoureuse et sincère.
           </p>
         </div>
       </section>
@@ -514,6 +529,50 @@ function App() {
                       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                  <a
+                    aria-label="Facebook"
+                    href="https://www.facebook.com/p/L%C3%A9picerie-Libanaise-restaurant-61574539592749/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: '0.6rem' }}
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="4" ry="4" />
+                      <path d="M15 8h-1.5c-1.2 0-1.5.6-1.5 1.5V11h3l-.4 2H12v6H9v-6H7.5V11H9V9.5c0-1.7.9-3.5 3.5-3.5H15v2z" />
+                    </svg>
+                  </a>
+                  <a
+                    aria-label="Google My Business"
+                    href="https://www.google.com/search?client=firefox-b-d&sca_esv=45c8bf4228d081b3&kgmid=%2Fg%2F11xf32sw9j&q=L'%C3%A9picerie%20Libanaise%20Restaurant&shndl=30&shem=lcuae%2Cuaasie&source=sh%2Fx%2Floc%2Funi%2Fm1%2F1&kgs=952028c8dacc72d7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ marginLeft: '0.6rem' }}
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z" />
+                      <circle cx="12" cy="10" r="3" />
                     </svg>
                   </a>
                 </div>
