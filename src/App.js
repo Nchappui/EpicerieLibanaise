@@ -9,12 +9,7 @@ const MENU_CSV_URL =
 function parseMenuCSV(csvText) {
   const lines = csvText.trim().split("\n");
 
-  const menuData = {
-    starters: [],
-    mains: [],
-    desserts: [],
-    drinks: [],
-  };
+  const menuData = {};
 
   // Commencer à la ligne 2 pour sauter l'en-tête et la première ligne vide
   for (let i = 2; i < lines.length; i++) {
@@ -45,7 +40,10 @@ function parseMenuCSV(csvText) {
     const name = values[0] || "";
     const desc = values[1] || "";
     const priceStr = values[2] || "";
-    const category = values[3].toLowerCase();
+    const categoryRaw = values[3] || "";
+
+    // Normaliser la catégorie (minuscules, sans espaces inutiles)
+    const category = categoryRaw.toLowerCase().trim();
 
     // Nettoyer le prix (enlever "CHF" et garder juste le nombre)
     const price = priceStr.replace(/[^\d.,]/g, "").replace(",", ".");
@@ -56,15 +54,13 @@ function parseMenuCSV(csvText) {
       price: price,
     };
 
-    if (category.includes("entrée") || category.includes("entree")) {
-      menuData.starters.push(item);
-    } else if (category.includes("plat")) {
-      menuData.mains.push(item);
-    } else if (category.includes("dessert")) {
-      menuData.desserts.push(item);
-    } else if (category.includes("boisson")) {
-      menuData.drinks.push(item);
+    // Créer la catégorie si elle n'existe pas déjà
+    if (!menuData[category]) {
+      menuData[category] = [];
     }
+
+    // Ajouter l'item à la catégorie correspondante
+    menuData[category].push(item);
   }
 
   return menuData;
@@ -116,12 +112,7 @@ function MenuCategory({ title, items }) {
 function App() {
   const [showOrderPopup, setShowOrderPopup] = useState(false);
   const [showBookingPopup, setShowBookingPopup] = useState(false);
-  const [menuData, setMenuData] = useState({
-    starters: [],
-    mains: [],
-    desserts: [],
-    drinks: [],
-  });
+  const [menuData, setMenuData] = useState({});
   const [isLoadingMenu, setIsLoadingMenu] = useState(true);
   const [menuError, setMenuError] = useState(false);
 
@@ -362,10 +353,15 @@ function App() {
             </div>
           ) : (
             <div className="menu-grid">
-              <MenuCategory title="Entrées" items={menuData.starters} />
-              <MenuCategory title="Plats" items={menuData.mains} />
-              <MenuCategory title="Desserts" items={menuData.desserts} />
-              <MenuCategory title="Boissons" items={menuData.drinks} />
+              {Object.keys(menuData).map((categoryKey) => (
+                <MenuCategory
+                  key={categoryKey}
+                  title={
+                    categoryKey.charAt(0).toUpperCase() + categoryKey.slice(1)
+                  }
+                  items={menuData[categoryKey]}
+                />
+              ))}
             </div>
           )}
         </div>
