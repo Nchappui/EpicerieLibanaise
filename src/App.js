@@ -536,7 +536,7 @@ function App() {
                     href="https://www.facebook.com/p/L%C3%A9picerie-Libanaise-restaurant-61574539592749/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ marginLeft: '0.6rem' }}
+                    style={{ marginLeft: "0.6rem" }}
                   >
                     <svg
                       width="20"
@@ -558,7 +558,7 @@ function App() {
                     href="https://www.google.com/search?client=firefox-b-d&sca_esv=45c8bf4228d081b3&kgmid=%2Fg%2F11xf32sw9j&q=L'%C3%A9picerie%20Libanaise%20Restaurant&shndl=30&shem=lcuae%2Cuaasie&source=sh%2Fx%2Floc%2Funi%2Fm1%2F1&kgs=952028c8dacc72d7"
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ marginLeft: '0.6rem' }}
+                    style={{ marginLeft: "0.6rem" }}
                   >
                     <svg
                       width="20"
