@@ -141,6 +141,7 @@ function App() {
       });
   }, []);
 
+  /*
   const handleOrderClick = (e) => {
     e.preventDefault();
     const isMobile =
@@ -156,16 +157,19 @@ function App() {
       setShowOrderPopup(true);
     }
   };
+  */
 
   const closePopup = () => {
     setShowOrderPopup(false);
     setShowBookingPopup(false);
   };
 
+  /*
   const handleBookingClick = (e) => {
     e.preventDefault();
     setShowBookingPopup(true);
   };
+  */
 
   // Fermer avec la touche Escape
   useEffect(() => {
@@ -247,7 +251,12 @@ function App() {
           </p>
 
           <div className="reservation-grid" style={{ marginTop: "2.25rem" }}>
-            <a className="card-link" href="#book" onClick={handleBookingClick}>
+            <a
+              className="card-link"
+              href="https://book.easytable.com/book/?id=6f9fd&lang=fr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div
                 className="card fade-in"
                 style={{ backdropFilter: "blur(4px)" }}
@@ -261,7 +270,12 @@ function App() {
                 <span className="btn">Réserver</span>
               </div>
             </a>
-            <a className="card-link" href="#order" onClick={handleOrderClick}>
+            <a
+              className="card-link"
+              href="https://mylightspeed.app/OKPZUCUF/C-ordering/menu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div
                 className="card fade-in"
                 style={{ animationDelay: ".1s", backdropFilter: "blur(4px)" }}
@@ -632,7 +646,7 @@ function App() {
         </div>
       )}
 
-      {/* Popup de réservation */}
+      {/* Popup de réservation (désactivée) - code précédent conservé ci-dessous
       {showBookingPopup && (
         <div className="popup-overlay" onClick={closePopup}>
           <div
@@ -676,6 +690,7 @@ function App() {
           </div>
         </div>
       )}
+      */}
     </>
   );
 }
